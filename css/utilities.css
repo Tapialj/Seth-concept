@@ -94,6 +94,33 @@
     transform: translate3d(0px, 50px, 0px);
 }
 
+.animation-element.slide-bottom-2 {
+    -moz-transform: translate3d(0px, 50px, 0px);
+    -webkit-transform: translate3d(0px, 50px, 0px);
+    -o-transform: translate(0px, 50px);
+    -ms-transform: translate(0px, 50px);
+    transform: translate3d(0px, 50px, 0px);
+    transition-delay: 0.2s;
+}
+
+.animation-element.slide-bottom-3 {
+    -moz-transform: translate3d(0px, 50px, 0px);
+    -webkit-transform: translate3d(0px, 50px, 0px);
+    -o-transform: translate(0px, 50px);
+    -ms-transform: translate(0px, 50px);
+    transform: translate3d(0px, 50px, 0px);
+    transition-delay: 0.4s;
+}
+
+.animation-element.slide-bottom-4 {
+    -moz-transform: translate3d(0px, 50px, 0px);
+    -webkit-transform: translate3d(0px, 50px, 0px);
+    -o-transform: translate(0px, 50px);
+    -ms-transform: translate(0px, 50px);
+    transform: translate3d(0px, 50px, 0px);
+    transition-delay: 0.6s;
+}
+
 .animation-element.in-view {
     opacity: 1;
     -moz-transform: translate3d(0px, 0px, 0px);
