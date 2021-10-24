@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Seth Jones</title>
+
+        <!--Meta data-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Icon-->
+        <link rel="icon" type="image/png" href="">
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Noto+Serif&display=swap" rel="stylesheet">
+        <!--Fontawesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <!--CSS Styles-->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/utilities.css">
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        
+        <header class="navbar">
+            <div class="container flex">
+                <a class="logo" href="index.html">
+                    Seth Jones
+                </a>
+
+                <nav class="flex">
+                    <ul>
+                        <li><a class="current" href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        
+                        <li class="dropdown">
+                            <a href="work.html">
+                                My Work
+                            </a>
+
+                            <div class="dropdown-content">
+                                <a href="work.html#constellations">Constellations</a>
+                                <a href="work.html#message">Art with a Message</a>
+                                <a href="work.html#landscapes">Landscapes</a>
+                            </div>
+                        </li>
+                        
+                        <li><a href="contact.html">Contact Me</a></li>
+                    </ul>
+
+                    <div class="social m-1">
+                        <a href="https://www.instagram.com/jonesonthelens">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+
+                        <a href="mailto:jones.tseth@gmail.com">
+                            <i class="far fa-envelope fa-lg"></i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero my-3">
+            <div class="container grid">
+                <h2 class="lg">
+                    I am an Omaha based photographer specializing in portrait work. I can be booked for everything from professional modeling portfolios to senior portraits!
+                </h2>
+
+                <img class="headshot" src="images/headshot.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="slideshow my-4">
+            <div class="container flex" data-slideshow>
+                <div class="image-group">
+                    <img src="images/home/slide0.jpg" alt="" class="slide fade">
+                    <img src="images/home/slide1.jpg" alt="" class="slide fade">                    
+                    <img src="images/home/slide2.jpg" alt="" class="slide fade">
+                </div>
+
+                <div class="image-group">
+                    <img src="images/home/slide3.jpg" alt="" class="slide fade">
+                    <img src="images/home/slide4.jpg" alt="" class="slide fade">
+                </div>
+
+                <div class="image-group">    
+                    <img src="images/home/slide5.jpg" alt="" class="slide fade">
+                    <img src="images/home/slide6.jpg" alt="" class="slide fade">
+                    <img src="images/home/slide7.jpg" alt="" class="slide fade">
+                    <img src="images/home/slide8.jpg" alt="" class="slide fade">
+                </div>
+                
+                <div class="image-group">    
+                    <img src="images/home/slide9.jpg" alt="" class="slide fade">
+                    <img src="images/home/slide10.jpg" alt="" class="slide fade">
+                    <img src="images/home/slide11.jpg" alt="" class="slide fade">
+                    <img src="images/home/slide12.jpg" alt="" class="slide fade">
+                </div>
+                
+                <div class="image-group">
+                    <img src="images/home/slide13.jpg" alt="" class="slide fade">
+                    <img src="images/home/slide14.jpg" alt="" class="slide fade">
+                    <img src="images/home/slide15.jpg" alt="" class="slide fade">
+                    <img src="images/home/slide16.jpg" alt="" class="slide fade">
+                </div>
+
+                <div class="image-group">
+                    <img src="images/home/slide17.jpg" alt="" class="slide fade">
+                    <img src="images/home/slide18.jpg" alt="" class="slide fade">
+                    <img src="images/home/slide19.jpg" alt="" class="slide fade">
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="container flex">
+                <h1 class="title xl">Galleries</h1>
+
+                <div class="gallery-item grid m-5">
+                    <a href="work.html#constellations" class="animation-element slide-left">
+                        <img src="images/Aries+Square.jpg" alt="Aries" class="gallery-image">
+                    </a>
+
+                    <aside class="gallery-text animation-element slide-right">
+                        <h1 class="lg">Constellations</h1>
+                        <p>
+                            I had a random idea when messing around with double exposure and a starscape photo I took and it turned into a really fun series!
+                        </p>
+                    </aside>
+                </div>
+
+                <div class="gallery-item grid  m-5">
+                    <aside class="gallery-text animation-element slide-left">
+                        <h1 class="lg">Art with a Message</h1>
+                        <p>
+                            My favorite images to capture are the ones that make it easier to explain the way I feel about something difficult to talk about.
+                        </p>
+                    </aside>
+
+                    <a href="work.html#message" class="animation-element slide-right">
+                        <img src="images/message.jpg" alt="Jordan" class="gallery-image">
+                    </a>
+                </div>
+
+                <div class="gallery-item grid  m-5">
+                    <a href="work.html#landscapes" class="animation-element slide-left">
+                        <img src="images/landscape.jpg" alt="Lake" class="gallery-image">
+                    </a>
+
+                    <aside class="gallery-text animation-element slide-right">
+                        <h1 class="lg">Landscapes</h1>
+                        <p>
+                            I will never grow tired of landscape photography. I swear, getting through any mountain range without stopping 6 times an hour is impossible for me. Prints will be made available soon!
+                        </p>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <footer class="primary-footer container flex">
+            <h2>&copy;2021 Seth T Jones</h2>
+
+            <div class="social-footer">
+                <a href="https://www.instagram.com/jonesonthelens">
+                    <i class="fab fa-instagram-square fa-3x"></i>
+                </a>
+
+                <a href="mailto:jones.tseth@gmail.com">
+                    <i class="fas fa-envelope-square fa-3x"></i>
+                </a>
+            </div>
+        </footer>
+
+        <script src="js/index.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

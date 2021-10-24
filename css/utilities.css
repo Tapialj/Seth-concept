@@ -1,0 +1,216 @@
+/**
+* Utility CSS/Framework
+*/
+
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+    /*overflow: auto;*/
+    padding: 0 60px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 1.2rem;
+    margin: 1rem;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.btn:hover {
+    background-color: #a8a6a1;
+    color: #000;
+}
+
+
+/**
+*   Animation
+*/
+
+.animation-element {
+    position: relative;
+    opacity: 0;
+    -moz-transition: all 500ms linear;
+    -webkit-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
+    transition: all 500ms linear;
+}
+
+.animation-element.slide-left {
+    -moz-transform: translate3d(-50px, 0px, 0px);
+    -webkit-transform: translate3d(-50px, 0px, 0px);
+    -o-transform: translate(-50px, 0px);
+    -ms-transform: translate(-50px, 0px);
+    transform: translate3d(-50px, 0px, 0px);
+}
+
+.animation-element.slide-right {
+    -moz-transform: translate3d(50px, 0px, 0px);
+    -webkit-transform: translate3d(50px, 0px, 0px);
+    -o-transform: translate(50px, 0px);
+    -ms-transform: translate(50px, 0px);
+    transform: translate3d(50px, 0px, 0px);
+}
+
+.animation-element.slide-top {
+    -moz-transform: translate3d(0px, -50px, 0px);
+    -webkit-transform: translate3d(0px, -50px, 0px);
+    -o-transform: translate(0px, -50px);
+    -ms-transform: translate(0px, -50px);
+    transform: translate3d(0px, -50px, 0px);
+}
+
+.animation-element.slide-bottom {
+    -moz-transform: translate3d(0px, 50px, 0px);
+    -webkit-transform: translate3d(0px, 50px, 0px);
+    -o-transform: translate(0px, 50px);
+    -ms-transform: translate(0px, 50px);
+    transform: translate3d(0px, 50px, 0px);
+}
+
+.animation-element.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+}
+
+/**
+*   Text
+*/
+
+.text-center {
+    text-align: center;
+}
+
+.lead {
+    font-size: 20px;
+}
+
+.sm {
+    font-size: 1rem;
+}
+
+.md {
+    font-size: 2rem;
+}
+
+.lg {
+    font-size: 3rem;
+}
+
+.xl {
+    font-size: 4rem;
+}
+
+/**
+*   Margin/Padding
+*/
+
+.my-1 {
+    margin: 1rem 0;
+}
+
+.my-2 {
+    margin: 1.5rem 0;
+}
+
+.my-3 {
+    margin: 2rem 0;
+}
+
+.my-4 {
+    margin: 2.5rem 0;
+}
+
+.my-5 {
+    margin: 3rem 0;
+}
+
+.m-1 {
+    margin: 1rem;
+}
+
+.m-2 {
+    margin: 1.5rem;
+}
+
+.m-3 {
+    margin: 2rem;
+}
+
+.m-4 {
+    margin: 2.5rem;
+}
+
+.m-5 {
+    margin: 3rem;
+}
+
+.py-1 {
+    padding: 1rem 0;
+}
+
+.py-2 {
+    padding: 1.5rem 0;
+}
+
+.py-3 {
+    padding: 2rem 0;
+}
+
+.py-4 {
+    padding: 2.5rem 0;
+}
+
+.py-5 {
+    padding: 3rem 0;
+}
+
+.p-1 {
+    padding: 1rem ;
+}
+
+.p-2 {
+    padding: 1.5rem;
+}
+
+.p-3 {
+    padding: 2rem;
+}
+
+.p-4 {
+    padding: 2.5rem;
+}
+
+.p-5 {
+    padding: 3rem;
+}

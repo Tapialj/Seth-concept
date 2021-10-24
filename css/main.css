@@ -1,0 +1,537 @@
+/**
+*   Browser resets
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/**
+*   General Style
+*/
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    font-family: 'Oxygen', sans-serif;
+    background: #000;
+    color: #fff;
+    line-height: 1.4;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+input[type="submit"] {
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+/**
+*   Header/Navbar
+*/
+
+.navbar {
+    position: sticky;
+    top: 0;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+
+.navbar > .flex {
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    font-size: 2.2rem;
+}
+
+.navbar ul {
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+.navbar ul a::after {
+    display: block;
+    content: "";
+    border-bottom: 2px solid #5e5e5e;
+    transform: scale(0);
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar .dropdown a::after {
+    border-bottom: 0;
+}
+
+.navbar ul a:hover::after {
+    transform: scale(1);
+}
+
+.navbar ul .current::after {
+    display: block;
+    content: "";
+    border: 0;
+}
+
+.current {
+    border-bottom: 2px solid #5e5e5e;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 90%;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 200px;
+    border: 1px solid #a8a6a1;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    text-align: left;
+    margin: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.dropdown-content a:hover {
+    background-color: #5e5e5e;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/**
+*   Hero
+*/
+
+.hero {
+    height: 300px;
+}
+
+.hero .headshot {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    width: 300px;
+    justify-self: center;
+}
+
+/**
+*   Slideshow
+*/
+
+.slideshow {
+    position: relative;
+}
+
+.slideshow .container {
+    height: 500px;
+}
+
+.slideshow .image-group,
+.slideshow img {
+    height: 100%;
+    width: auto;
+}
+
+.slideshow .image-group {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #000;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: -1;
+}
+
+.slideshow .image-group.next {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slideshow .image-group.prev {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slideshow .image-group.fade {
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+    visibility: hidden;
+}
+
+/**
+*   Gallery
+*/
+
+.gallery .flex {
+    flex-direction: column;
+}
+
+.gallery .title {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #fff;
+}
+
+.gallery .grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-item .gallery-image {
+    border-radius: 10px;
+    border: 2px outset #a8a6a1;
+}
+
+.gallery-item a {
+    width: 750px;
+    margin: auto;
+    grid-column: 1 / span 3;
+}
+
+.gallery-item a:nth-child(2){
+    grid-column: 2 / span 3;
+}
+
+.gallery-item .gallery-text {
+    text-align: right;
+}
+
+.gallery-item .gallery-text:nth-child(1) {
+    text-align: left;
+}
+
+.gallery-text h1 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff;
+}
+
+.gallery-text p {
+    font-size: 1.2rem;
+}
+
+/**
+*   About Me
+*/
+
+.about .flex {
+    flex-direction: column;
+}
+
+.about .about-container {
+    padding: 5rem 0;
+}
+
+.about .about-container.grid {
+    gap: 50px;
+}
+
+.about-container .about-text h1 {
+    font-size: 2.5rem;
+}
+
+.about-container .about-text p {
+    margin-top: 2rem;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+.about-container .about-text .text-center {
+    margin-top: 1.5rem;
+}
+
+.about-container .image-container h6 {
+    font-family: 'Noto Serif', serif;;
+    text-align: right;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/**
+*   My work
+*/
+
+.constellations h1,
+.message h1,
+.landscapes h1 {
+    border-bottom: 1px solid #fff;
+}
+
+/* Constellations*/
+
+.constellations h1 {
+    border-bottom: 1px solid #fff;
+}
+
+.constellations .grid {
+    gap: 5.5rem;
+    grid-template-areas: 
+    "aquarius libra gemini"
+    "aquarius aries gemini"
+    "cancer sagittarius leo"
+    "cancer sagittarius pisces"
+    "scorpio taurus virgo"
+    "scorpio capricorn virgo";
+}
+
+#aquarius {
+    grid-area: aquarius;
+}
+
+#libra {
+    grid-area: libra;
+}
+
+#gemini {
+    grid-area: gemini;
+}
+
+#aries {
+    grid-area: aries;
+}
+
+#cancer {
+    grid-area: cancer;
+}
+
+#sagittarius {
+    grid-area: sagittarius;
+}
+
+#leo {
+    grid-area: leo;
+}
+
+#pisces {
+    grid-area: pisces;
+}
+
+#scorpio {
+    grid-area: scorpio;
+}
+
+#taurus {
+    grid-area: taurus;
+}
+
+#virgo {
+    grid-area: virgo;
+}
+
+#capricorn {
+    grid-area: capricorn;
+}
+
+/*
+.constellations .grid img:nth-child(2),
+.constellations .grid img:nth-child(7),
+.constellations .grid img:nth-child(9) {
+    align-self: start;
+}
+
+.constellations .grid img:nth-child(3),
+.constellations .grid img:nth-child(8),
+.constellations .grid img:nth-child(11) {
+    align-self: end;
+}
+*/
+
+/* Message */
+
+.climate.grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.climate h2,
+.climate p {
+    margin: 4rem 3rem;
+}
+
+.climate h2 {
+    grid-column: 1 / span 2;
+    text-align: right;
+    width: 40%;
+    justify-self: end;
+}
+
+.climate p {
+    grid-column: 3 / span 2;
+    width: 30%;
+}
+
+.stories.flex {
+    flex-direction: column;
+}
+
+.stories .grid {
+    gap: 80px;
+}
+
+.stories .messages-container {
+    margin: 15rem 0;
+}
+
+.stories .messages-text {
+    width: 100%
+}
+
+.stories .messages-text h2 {
+    margin-bottom: 1rem;
+}
+
+/* Landscapes */
+
+.landscapes.my-3 {
+    margin: 2rem 0 10rem;
+}
+
+.landscapes .flex {
+    flex-wrap: wrap;
+}
+
+.landscapes img {
+    margin: 1.5rem;
+    width: 40%;
+}
+
+/**
+*   Contact
+*/
+
+.contact {
+    padding: 9rem 0;
+}
+
+.contact .contact-text {
+    width: 80%;
+}
+
+.contact form {
+    width: 60%;
+}
+
+.contact form label {
+    display: block;
+    margin: 20px 0 10px;
+}
+
+.contact form .input-area {
+    height: 2.5rem;
+    font-size: 1.3rem;
+}
+
+.contact form > .input-area {
+    width: 99%;
+}
+
+.contact form fieldset .input-area {
+    width: 49%;
+}
+
+.contact form textarea {
+    display: block;
+    width: 99%;
+    height: 6rem;
+    font-size: 1.3rem;
+}
+
+.contact form .btn {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+}
+
+/**
+*   Footer
+*/
+
+.primary-footer.flex {
+    position: relative;
+    height: 100px;
+    justify-content: left;
+}
+
+.primary-footer h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.primary-footer .social-footer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.social-footer a {
+    margin: 0 0.5rem;
+}
