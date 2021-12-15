@@ -192,7 +192,7 @@ img {
     background: #fff;
     width: 100%;
     transform-origin: 50% 50%;
-    transition: top 0.3s cubic-bezier(0.5, 0, 0.3, 1) 0.2s, bottom 0.3s cubic-bezier(0.5, 0, 0.3, 1) 0.2s, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    transition: top 150ms cubic-bezier(0.5, 0, 0.3, 1) 150ms, bottom 150ms cubic-bezier(0.5, 0, 0.3, 1) 150ms, transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 .line:nth-child(1) {
@@ -282,6 +282,16 @@ img {
     grid-template-columns: repeat(4, 1fr);
 }
 
+.gallery .gallery-item:nth-child(even) .gallery-text {
+    grid-row: 1;
+    grid-column: 1;
+    text-align: left;
+}
+
+.gallery .gallery-item:nth-child(even) a  {
+    grid-column: 2 / span 3;
+}
+
 .gallery-item .gallery-image {
     border-radius: 10px;
     border: 2px outset #a8a6a1;
@@ -291,10 +301,6 @@ img {
     width: 750px;
     margin: auto;
     grid-column: 1 / span 3;
-}
-
-.gallery-item a:nth-child(2){
-    grid-column: 2 / span 3;
 }
 
 .gallery-item .gallery-text {
@@ -328,6 +334,15 @@ img {
 
 .about .about-container.grid {
     gap: 50px;
+}
+
+.about .about-container:nth-child(odd) .image-container {
+    grid-column: 2;
+}
+
+.about .about-container:nth-child(odd) .about-text {
+    grid-row: 1;
+    grid-column: 1;
 }
 
 .about-container .about-text h1 {
@@ -444,6 +459,10 @@ img {
 
 .climate.grid {
     grid-template-columns: repeat(4, 1fr);
+}
+
+.climate-img.flex{
+    flex-wrap: wrap;
 }
 
 .climate h2,
@@ -645,7 +664,7 @@ img {
     }
 
     .mobile-menu.menu-open > .line {
-        transition: top 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, bottom 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+        transition: top 150ms cubic-bezier(0.4, 0, 0.2, 1) 0s, bottom 150ms cubic-bezier(0.4, 0, 0.2, 1) 0s, transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 150ms;
     }
 
     .mobile-menu.menu-open .line:nth-child(1) {
@@ -698,4 +717,27 @@ img {
         padding: 10px 15px;
     }
 
+    /* Galleries */
+
+    .gallery .gallery-item .gallery-text {
+        text-align: left;
+    }
+
+    .gallery .gallery-item:nth-child(even) .gallery-text {
+        grid-row: 2;
+    }
+    
+    .gallery .gallery-item:nth-child(even) a {
+        grid-column: 1;
+    }
+
+    /* About */
+
+    .about .about-container:nth-child(odd) .image-container {
+        grid-column: 1;
+    }
+    
+    .about .about-container:nth-child(odd) .about-text {
+        grid-row: 2;
+    }
 }
