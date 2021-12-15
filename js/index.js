@@ -73,35 +73,6 @@ class Slideshow
 
 $(function ()
 {
-    //Expand menu on menu button click
-    $(".mobile-menu").click(expandMenu);
-
-    function expandMenu() {
-        $(".primary-nav").toggleClass("menu-expand");
-        $(".dropdown").toggleClass("menu-open");
-        $(this).toggleClass("menu-open");
-
-        //Remove nav-shift if close is clicked to reset menu
-        $(".primary-nav").removeClass("nav-shift");
-        $(".dropdown-content").removeClass("nav-shift");
-    }
-
-    //Slide menu over if my galleries is clicked to show my galleries or if back button is hit to return to main nav
-    $(".dropdown-btn").click(mobileGalleryMenu);
-    $(".fa-chevron-left").click(mobileGalleryMenu);
-
-    function mobileGalleryMenu(e) {
-        const dropdownClasses = $(".dropdown").attr("class").split(/\s+/);
-
-        $.each(dropdownClasses, function(i, attr) {
-            if(attr === "menu-open") {
-                e.preventDefault();
-                $(".primary-nav").toggleClass("nav-shift");
-                $(".dropdown-content").toggleClass("nav-shift");
-            }
-        });
-    }
-
     new Slideshow();
 });
 
