@@ -100,9 +100,10 @@ img {
 
 .navbar .logo {
     font-size: 2.2rem;
+    z-index: 100;
 }
 
-.navbar ul {
+.navbar .primary-nav > ul {
     display: flex;
     font-size: 1.2rem;
 }
@@ -113,7 +114,7 @@ img {
     margin: 0 5px;
 }
 
-.navbar ul a::after {
+.navbar .primary-nav > ul > a::after {
     display: block;
     content: "";
     border-bottom: 2px solid #5e5e5e;
@@ -125,11 +126,11 @@ img {
     border-bottom: 0;
 }
 
-.navbar ul a:hover::after {
+.navbar .primary-nav > ul > a:hover::after {
     transform: scale(1);
 }
 
-.navbar ul .current::after {
+.navbar .primary-nav > ul .current::after {
     display: block;
     content: "";
     border: 0;
@@ -141,6 +142,11 @@ img {
 
 .dropdown {
     position: relative;
+}
+
+.dropdown i {
+    display: none;
+    margin-left: 0.5rem;
 }
 
 .dropdown-content {
@@ -167,6 +173,34 @@ img {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.mobile-menu {
+    position: absolute;
+    right: 15%;
+    top: 35%;
+    width: 2.5rem;
+    height: 1.75rem;
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.line {
+    position: relative;
+    height: 2.5px;
+    background: #fff;
+    width: 100%;
+    transform-origin: 50% 50%;
+    transition: top 0.3s cubic-bezier(0.5, 0, 0.3, 1) 0.2s, bottom 0.3s cubic-bezier(0.5, 0, 0.3, 1) 0.2s, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+.line:nth-child(1) {
+    top: 1px;
+}
+
+.line:nth-child(3) {
+    bottom: 1px;
 }
 
 /**
@@ -534,4 +568,134 @@ img {
 
 .social-footer a {
     margin: 0 0.5rem;
+}
+
+/**
+* Animations
+*/
+
+
+
+/**
+* mobile and tablet media queries
+*/
+
+@media only screen and (max-width: 1900px) {
+   
+    /* Hero */
+
+   .hero {
+       height: 20%;
+   }
+   
+    /* Slideshow */
+
+    .slideshow {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1100px) {
+    
+    .grid,
+    .hero .grid,
+    .gallery .grid,
+    .about .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Navbar */
+
+    .navbar .primary-nav {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        transition: left 250ms ease-in-out;
+        z-index: 10;
+    }
+
+    .navbar .primary-nav.menu-expand {
+        left: 0;
+    }
+
+    .navbar .primary-nav.menu-expand.nav-shift {
+        left: -100%;
+    }
+
+    .navbar .primary-nav ul {
+        flex-direction: column;
+    }
+
+    .navbar .primary-nav li {
+        
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    .navbar .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .mobile-menu.menu-open > .line {
+        transition: top 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, bottom 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    }
+
+    .mobile-menu.menu-open .line:nth-child(1) {
+        top: calc(50% - 1px);
+        transform: rotate(0.125turn);
+    }
+
+    .mobile-menu.menu-open .line:nth-child(2) {
+        transform: rotate(0.125turn);
+    }
+
+    .mobile-menu.menu-open .line:nth-child(3) {
+        bottom: calc(50% - 1px);
+        transform: rotate(-0.125turn);
+    }
+
+    .dropdown i {
+        display: inline;
+    }
+
+    .primary-nav .dropdown .dropdown-content {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        transition: left 250ms ease-in-out;
+        border: none;
+        z-index: 10;
+    }
+
+    .dropdown .dropdown-content.nav-shift {
+        left: 0;
+    }
+
+    .dropdown .dropdown-content h2 {
+        display: inline;
+        margin-left: 1rem;
+        font-size: 2rem;
+        font-family: 'Oxygen', sans-serif;
+    }
+
+    .dropdown .dropdown-content i {
+        margin: 0;
+        padding: 10px 15px;
+    }
+
 }
