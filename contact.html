@@ -30,24 +30,47 @@
                     Seth Jones
                 </a>
 
-                <nav class="flex">
+                <div class="mobile-menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+
+                <nav class="primary-nav flex">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a class="current" href="index.html">Home</a></li>
                         <li><a href="about.html">About Me</a></li>
                         
                         <li class="dropdown">
-                            <a href="work.html">
+                            <a class="dropdown-btn" href="work.html">
                                 My Work
+                                <i class="fas fa-chevron-right"></i>
                             </a>
 
                             <div class="dropdown-content">
-                                <a href="work.html#constellations">Constellations</a>
-                                <a href="work.html#message">Art with a Message</a>
-                                <a href="work.html#landscapes">Landscapes</a>
+                                <ul>
+                                    <li>
+                                        <i class="fas fa-chevron-left">
+                                            <h2>Back</h2>
+                                        </i>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="work.html#constellations">Constellations</a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="work.html#message">Art with a Message</a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="work.html#landscapes">Landscapes</a>
+                                    </li>
+                                </ul>
                             </div>
                         </li>
                         
-                        <li><a href="contact.html" class="current">Contact Me</a></li>
+                        <li><a href="contact.html">Contact Me</a></li>
                     </ul>
 
                     <div class="social m-1">
