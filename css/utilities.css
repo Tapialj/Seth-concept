@@ -18,8 +18,8 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: var(--gap, 1.25rem);
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -143,15 +143,15 @@
 }
 
 .sm {
-    font-size: 1rem;
+    font-size: clamp(0.75rem, 4vw + 1rem, 1rem);
 }
 
 .md {
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 4.5vw + 1rem, 2.25rem);
 }
 
 .lg {
-    font-size: 3rem;
+    font-size: clamp(2.25rem, 5vw + 1rem, 3rem);
 }
 
 .xl {
