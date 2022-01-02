@@ -387,19 +387,15 @@ img {
 
 /* Constellations*/
 
-.constellations h1 {
-    border-bottom: 1px solid #fff;
-}
-
 .constellations .grid {
     --gap: 5.5rem;
     grid-template-areas: 
-    "aquarius libra gemini"
-    "aquarius aries gemini"
-    "cancer leo sagittarius"
-    "cancer pisces sagittarius"
-    "scorpio taurus virgo"
-    "scorpio capricorn virgo";
+        "aquarius libra gemini"
+        "aquarius aries gemini"
+        "cancer leo sagittarius"
+        "cancer pisces sagittarius"
+        "scorpio taurus virgo"
+        "scorpio capricorn virgo";
 }
 
 #aquarius {
@@ -450,28 +446,24 @@ img {
     grid-area: capricorn;
 }
 
-/*
-.constellations .grid img:nth-child(2),
-.constellations .grid img:nth-child(7),
-.constellations .grid img:nth-child(9) {
-    align-self: start;
-}
-
-.constellations .grid img:nth-child(3),
-.constellations .grid img:nth-child(8),
-.constellations .grid img:nth-child(11) {
-    align-self: end;
-}
-*/
-
 /* Message */
 
 .climate.grid {
+    grid-template-areas: 
+        "images images"
+        "title exp";
+}
+
+.climate-img {
+    grid-area: images;
+}
+
+.climate-img.grid {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.climate-img.flex{
-    flex-wrap: wrap;
+.climate-img img {
+    margin: 0 1.25rem;
 }
 
 .climate h2,
@@ -480,14 +472,14 @@ img {
 }
 
 .climate h2 {
-    grid-column: 1 / span 2;
+    grid-area: title;
     text-align: right;
     width: 40%;
     justify-self: end;
 }
 
 .climate p {
-    grid-column: 3 / span 2;
+    grid-area: exp;
     width: 30%;
 }
 
@@ -495,20 +487,28 @@ img {
     flex-direction: column;
 }
 
-.stories .grid {
-    gap: 80px;
-}
-
 .stories .messages-container {
+    --gap: 5rem;
+    grid-template-areas: "image story";
+    grid-template-columns: repeat(2, 1fr);
     margin: 15rem 0;
 }
 
+.stories .messages-container .story-img {
+    grid-area: image;
+}
+
 .stories .messages-text {
+    grid-area: story;
     width: 100%
 }
 
 .stories .messages-text h2 {
     margin-bottom: 1rem;
+}
+
+.stories .messages-container:nth-child(even) {
+    grid-template-areas: "story image";
 }
 
 /* Landscapes */
@@ -752,14 +752,6 @@ img {
         text-align: left;
     }
 
-    /* .gallery .gallery-item:nth-child(even) .gallery-text {
-        grid-row: 2;
-    }
-    
-    .gallery .gallery-item:nth-child(even) a {
-        grid-column: 1;
-    } */
-
     /* About */
 
     .about .about-container.grid {
@@ -770,7 +762,73 @@ img {
 
     /* Constellations */
 
-    
+    .constellations .grid {
+        --gap: 1.5rem;
+        grid-template-areas: 
+            "aquarius gemini"
+            "libra libra"
+            "aries aries"
+            "cancer sagittarius"
+            "leo leo"
+            "pisces pisces"
+            "scorpio virgo"
+            "taurus taurus"
+            "capricorn capricorn";
+    }
+
+    /* Art with a message */
+
+    .climate.grid {
+        grid-template-areas: 
+            "images"
+            "title"
+            "exp";
+    }
+
+    .climate-img.grid {
+        grid-template-columns: 1fr;
+    }
+
+    .climate-img img {
+        margin: 0.5rem 0;
+    }
+
+    .climate h2,
+    .climate p {
+        margin: 1rem 0;
+    }
+
+    .climate h2 {
+        grid-area: title;
+        text-align: center;
+        width: 100%;
+        justify-self: end;
+    }
+
+    .climate p {
+        grid-area: exp;
+        text-align: center;
+        width: 100%;
+    }
+
+    .stories .messages-container {
+        grid-template-areas: 
+            "image"
+            "story"
+            !important;
+        grid-template-columns: 1fr;
+        margin: 5rem 0;
+    }
+
+    .landscapes img {
+        width: 100%;
+    }
+
+    /* Contact */
+
+    .contact form {
+        width: 100%;
+    }
 
     /* Footer */
 

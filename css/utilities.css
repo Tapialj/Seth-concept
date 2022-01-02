@@ -155,7 +155,7 @@
 }
 
 .xl {
-    font-size: 4rem;
+    font-size: clamp(3rem, 5.5vw + 1rem, 4rem);
 }
 
 /**
